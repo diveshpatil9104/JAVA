@@ -40,7 +40,7 @@ public class no_07_practice_set {
         
             // System.out.print("please enter ur name : ");
             // String str = sc.nextLine();
-            // System.out.print("Hello ");
+            // System.out.print("Hello " + str + "have a good day");
             // System.out.print(str);
             // System.out.print(", Have a good day ");
 
@@ -74,7 +74,7 @@ public class no_07_practice_set {
         System.out.print("enter the price of eraser : ");
         float f3 = sc.nextFloat();
         float bill=f1+f2+f3;
-        System.out.println("ur bill : "+ bill);
+        System.out.println("ur bill : "+bill);
         
         //bill with 18% gst add on
         float newbill= bill +(bill* 0.18f);
