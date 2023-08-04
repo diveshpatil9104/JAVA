@@ -1,6 +1,7 @@
 package no_4_conditionals;
 
 import java.util.Scanner;
+import java.util.jar.Attributes.Name;
 
 
 /**
@@ -41,6 +42,7 @@ public class no_18_elseif {
 
         String name;
 
+
         System.out.print("ENTER UR NAME : ");
         Scanner sc = new Scanner(System.in);
         name = sc.nextLine();
@@ -69,6 +71,8 @@ public class no_18_elseif {
             case "divesh":
                 System.out.println("YOUR FULL NAME IS\n DIVESH DEVENDRA PATIL ");
                 break;
+            case "bhushan" :
+                System.out.println(" YOUR FULL NAME IS\n BHUSHAN NANA PATIL ");
 
             default:
                 System.out.println("UR NOT PRESENT IN LIST ");

@@ -60,6 +60,15 @@ public class no_19_practice_set {
         else {
             System.out.println(name.toUpperCase() + " CONGRATS!! YOU ARE PASS ");
         }
+
+-------------------------------------------OR-------------------------------------------------------
+
+        if ((a < 33) || (b < 33) || (c < 33)  || (per < 40)) {
+        System.out.println( name + " sorry ur fail ");
+        }
+        else {
+        System.out.println(name + " congrats !! ur pass");
+      }
  */ 
 
 // QN NO.3 ----> CALCULATE INCOME TAX PAID BY AN EMOLOYEE TO THE GOVERMENT AS PER THE SLOTE MENTIONED BELOW..
@@ -160,7 +169,7 @@ public class no_19_practice_set {
         System.out.print(" ENTER THE URL OF WEBSITE: ");
         String url = sc.nextLine();
 
-        if(url.endsWith(".url")){
+        if(url.endsWith(".com")){
             System.out.println("IT IS COMMERCIAL WEBSITE");
         }
         else if (url.endsWith(".org")) {
