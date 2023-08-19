@@ -131,23 +131,5 @@ public class no_27_arrays {
 
 
 
-      
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
