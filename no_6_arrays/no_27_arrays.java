@@ -127,7 +127,7 @@ public class no_27_arrays {
 
      int numbers[] = {  1 , 2 , 4 , 5 , 6 , 8 , 10};
      int key = 10;
-    System.out.println("ondex of key is : " + binSearch(numbers, key));
+    System.out.println("index of key is : " + binSearch(numbers, key));
 
 
 
