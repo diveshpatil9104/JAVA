@@ -1,6 +1,6 @@
-# JAVA
-my java codes....
-# Java Code and Notes Repository
+ # JAVA 
+
+# Java Repository
 
 **Description**: This repository houses Java source code and comprehensive notes, serving as a resource for learning and reference.
 
