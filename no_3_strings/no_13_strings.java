@@ -8,7 +8,7 @@ public class no_13_strings {
 
     public static void main(String[] args) {
         //   String name = new String("my name is raj patil");
-        // String name = " my name is raj patil";  //it is also method for print strirng ...
+        // String name = " my name is raj patil";  //it is also method for print string ...
         // System.out.print(" and and also divesh");
         // System.out.println(name);
         
