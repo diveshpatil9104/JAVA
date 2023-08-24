@@ -1,5 +1,6 @@
 package no_6_arrays;
 
+import java.util.Scanner;
 
 /**
  * no_28_multidimensional_arrays
@@ -18,14 +19,46 @@ public class no_28_multidimensional_arrays {
         flats[1][2] = 203;
         
 // ----->  Displying the 2d array (for loop) <------
-        System.out.println("Printing a 2-D array using for loop");
+/*         System.out.println("Printing a 2-D array using for loop");
 
-        for(int i=0; i<=flats.length; i++){    // flat length is 2
+        for(int i=0; i<flats.length; i++){    // flat length is 2
             for(int j=0; j<flats[i].length; j++){
                 System.out.print(flats[i][j]);
                 System.out.print(" ");
             }
+           System.out.println();
+        }
+*/ 
+
+// ------->> Taking input in 2D array
+
+
+        int numbers[][] = new int [3][3];
+        Scanner sc = new Scanner(System.in);
+        int n = numbers.length , m = numbers[0].length;
+        System.out.print("enter the numbers: ");
+
+        for (int i = 0; i < n; i++) {
+            for(int j = 0; j< m; j++){
+                numbers[i][j] = sc.nextInt();
+                System.out.print(numbers[i][j] + " ");
+
+            }
             System.out.println();
         }
+
+        // for output
+
+        // for (int i = 0; i < n; i++) {
+        //     for(int j = 0; j< m; j++){
+        //         System.out.print(numbers[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
+
+
+
+
+
     }
 }
