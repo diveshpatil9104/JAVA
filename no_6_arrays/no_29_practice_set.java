@@ -1,12 +1,48 @@
 package no_6_arrays;
 import java.util.Scanner;
 
-import no_2_operators_and_expressions.no_10_resulting_datatypes;
+
+
+
 
 /**
  * no_29_practice_set
  */
 public class no_29_practice_set {
+
+
+// ----->> function for QN NO.8             int number[] = { 1 , 3, 8 , 5 , 6 , 7};
+
+
+    public static boolean search( int numbers[]){
+        for (int i = 1; i < numbers.length; i++) {
+
+            if (numbers[i-1]>numbers[i]) {
+                
+                return false;
+
+                
+            }
+            
+        }
+        return true;
+
+    }    
+
+// ----->> function for QN NO.9
+    public static int linsearch( String menu[] , String key){
+        for( int i = 0; i < menu.length; i++){
+                if ( menu[i] == key) {
+                    return i;
+                    } 
+                }    
+                    
+            return -1;    
+
+
+            }
+
+    
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -66,10 +102,56 @@ public class no_29_practice_set {
 
 // QN NO.4----> CREATE A JAVA PROGRAM TO ADD TWO MATRICES OF SIZE 2 X 3 ..
 
+        int matA[][] = new int [2][3];
+        matA[0][0]= 1; 
+        matA[0][1]= 2; 
+        matA[0][2]= 3; 
+        matA[1][0]= 1; 
+        matA[1][1]= 2; 
+        matA[1][2]= 3; 
 
+        int matb[][] = new int [2][3];
+        matb[0][0]= 1; 
+        matb[0][1]= 2; 
+        matb[0][2]= 3; 
+        matb[1][0]= 1; 
+        matb[1][1]= 2; 
+        matb[1][2]= 3; 
 
+        int sum[][] = new int [2][3];
 
+        System.out.println(" Printing first matrix");
 
+        for (int i = 0; i < matA.length; i++) {
+            for(int j = 0; j<3; j++){
+                System.out.print(" " + matA [i][j]);
+            }
+            System.out.println();
+            
+        }
+
+        System.out.println(" Printing second matrix ");
+
+        for (int i = 0; i < matb.length; i++) {
+            for(int j = 0; j< 3; j++){
+                System.out.print(" " + matb[i][j]);
+            }
+            System.out.println();
+            
+        }
+
+        System.out.println("Sum of two matrix is : ");
+
+        for (int i = 0; i < sum.length; i++) {
+            for( int j = 0; j< 3; j++){
+            sum[i][j] = matA[i][j] + matb[i][j];    
+
+            System.out.print( " " + sum[i][j]);
+            }   
+            
+         System.out.println();
+        }
+       
 
 // QN NO.5----> WRITE A JAVA PROGRAM TO FIND THE MAXIMUM ELEMENT IN JAVA ARRAY.
 /* 
@@ -116,11 +198,8 @@ public class no_29_practice_set {
 
 // QN NO.8----> WRITE A JAVA PROGRAM TO FIND WHETHER AN ARRAY IS SORTED OR NOT ...
 
-
-
-
-
-
+            int number[] = { 1 , 3, 4 , 5 , 6 , 7};
+            System.out.println(search(number));
 
 
 
@@ -129,14 +208,16 @@ public class no_29_practice_set {
 
 // QN NO.9 ------> WRITE A PROGRAM TO FIND THE SPECIFIC FOOD BY USER IN THE MENU WHICH IS ARRAY. 
 
-
-
-
-
-
-
-
-
+            String menu[] = { "pavbhaji" , "vadapaav" , "paneer" , "chicken" , "aalu bhaji" , "puran poli" , "dosa" , "samosa"};
+            String key = "vada rassa";
+            int index = linsearch(menu, key);
+                if (index ==-1) {
+                    System.out.println(" sorry food is not in menu ");
+                    
+                }
+                else {
+                System.out.println("your food present in index : " + index);}
+             
 
 
 /* QN NO.10 -------> WRITE A PROGRAMS TO FOLLOWING PAIRS OF GIVEN ATTAY IN JAVA..
@@ -221,7 +302,7 @@ public class no_29_practice_set {
 
 
 
-// -------> write a program to find the  max subarray sum..
+// QN NO.14-------> write a program to find the  max subarray sum..
             // int numbers[]={ 2 , 4 , 6, 8 ,10};
 
 /* 
@@ -247,7 +328,7 @@ public class no_29_practice_set {
             System.out.println("maxsum is :" + maxsum);
 */
 
-// -------> write a program to find the  max subarray sum using KADANE'S ALGORITHM..
+// QN NO.15 -------> write a program to find the  max subarray sum using KADANE'S ALGORITHM..
 
 // KADANE'S ALGORITHM ---->Kadane's Algorithm finds the maximum sum subarray, 
 //                           and if all elements are negative, the maximum sum will be 0...time  complexity is very less 
@@ -278,17 +359,88 @@ public class no_29_practice_set {
             System.out.println("our max subarray sum is : " + maxsum);
 */
 
+ /*   QN NO.16 ---->> TRAPPING RAINWATER 
+            
+            Given n non-negative integers representing an elevation map where the width of each bar is 1 , compute how much
+            water it can trap after raining 
+
+            height =[ 4, 2, 0 , 6 , 3 ,2 ,5]
+ */
+            int height[] = { 4 , 2 , 0, 6 , 3 , 2 , 5 };
+            int n = height.length;
+             
+            // calculating left max boundary array 
+            
+            int leftmax[] =  new int[n];
+            leftmax[0] = height[0];
+
+            for (int i = 1; i < height.length; i++) {
+                leftmax[i] = Math.max(height[i], leftmax[i -1]); 
+                // System.out.print(leftmax[i] + " ");   //just checking array is correct or not..
+
+            }
+            // calculating right max boundary array
+            
+            int rightmax[]= new int [n];
+            rightmax[n-1] = height[n-1];
+
+            for (int i = n-2; i >= 0; i--) {
+                rightmax[i] = Math.max(height[i], rightmax[i+1]);
+                // System.out.print(rightmax[i] + " " );  //just checking array is correct or not..
+            
+            }
+
+            int trapped_water = 0;
+            //loop
+
+            for (int i = 0; i < n; i++) {
+//                 water level = minimum of (left boundary , right boundary)
+                    int water_level = Math.min(leftmax[i], rightmax[i]);
+
+//                  trapped water = (water level - height of bar) * width of bar    (width of bar  =  1)
+                    trapped_water +=  water_level - height[i];
+               }
+
+               System.out.println( "TRAPPED RAINWATER IN BAR : " + trapped_water);
+
+
+
+/*  QN NO.17 -----> BUY AND SELL STOKES :
+               
+               YOU ARE GIVEN AN ARRAY PRICES WHERE prices[] IS THE PRICE OF A GIVEN STOKES ON THE ith DAY. YOU WANT TO
+               MAXIMIZE YOUR PROFIT BY CHOOSING A SINGLE DAY IN THE FUTURE TO SELL THAT STOCK. 
+               RETURN THE MAXIMUM PROFIT YOU CAN ACHIEVE FROM THIS TRANSACTION. IF YOU CANNOT ACHIEVE ANY PROFIT. return 
+  
+               int prices[] = {7 , 1 , 5 , 3 , 6 , 4}
+*/  
+            
+            int prices[] = {7 , 1 , 5 , 3 , 6 , 4};
+            int buy_prize = Integer.MAX_VALUE;  // + infinity value (maximum value)
+
+            int max_profit = 0;
+
+            for (int i = 0; i < prices.length; i++) {
+                if ( buy_prize < prices[i]) {      // case for profit 
+                    int profit =  prices[i] - buy_prize;   // todays profit 
+
+                    max_profit = Math.max(max_profit, profit); 
+                
+                } else {
+                    buy_prize = prices[i];
+                }
+                System.out.print( "$" + max_profit + " " );
+            }       
 
 
 
 
 
+    }
 
-  }
-                                                                     
+}                                                               
 
 
-} 
+
 
 
 
