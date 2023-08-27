@@ -428,8 +428,90 @@ public class no_29_practice_set {
                 } else {
                     buy_prize = prices[i];
                 }
-                System.out.print( "$" + max_profit + " " );
+                System.out.print( "$" + max_profit + " "  );
             }       
+                System.out.println("\n");
+
+
+
+
+
+/*  QN NO.19 ----> Spiral matrix  ->> this qn is was asked in GOOGLE , APPLE , MICROSOFT ,AMAZON, ORACLE INTERVIEWS
+
+
+                    1 | 2 | 3 | 4
+                    5 | 6 | 7 | 8 
+                    9 |10 | 11| 12
+                    13| 14| 15| 16
+
+                expected output: 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10 
+
+
+*/
+             int matrix[][] = { { 1 , 2 , 3 , 4 } , { 5 , 6 , 7 , 8  },
+                                { 9 , 10 , 11 , 12 } , { 13 , 14 , 15 , 16 } };
+
+            
+            int start_row = 0;
+            int start_coll = 0;
+            int end_row = matrix.length -1;
+            int end_coll = matrix[0].length-1;      
+            
+            while (start_row <= end_row && start_coll<=end_coll) {
+
+                //top
+                for (int j = start_coll; j<=end_coll; j++ ){
+                    System.out.print(matrix[start_row][j] + " ");
+                
+                }
+                
+
+                // Right 
+                for(int i = start_row+1; i<=end_row; i++){
+                    System.out.print(matrix[i][end_coll] + " ");
+                
+                }
+            
+                
+                // Bottom 
+                for(int j = end_coll-1; j>=start_coll; j--){
+                    if (start_row==end_row) {
+                        break;
+
+                    }
+                    System.out.print(matrix[end_row][j] + " ");
+
+                }
+            
+
+                // Left
+                for(int i = end_row-1; i>=start_row+1; i--){
+                    if (start_coll==end_coll) {
+                        break;
+                        
+                        
+                    }
+                    System.out.print(matrix[i][start_coll] + " ");
+                }
+            
+            start_coll ++;
+            start_row ++;
+            end_coll --;
+            end_row --;
+
+             }
+           
+            System.out.println();
+             
+
+
+            
+
+
+
+
+
+
 
 
 
