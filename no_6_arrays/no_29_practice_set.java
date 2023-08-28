@@ -1,6 +1,8 @@
 package no_6_arrays;
 import java.util.Scanner;
 
+import no_5_loop_control_instruction.revision;
+
 
 
 
@@ -41,6 +43,38 @@ public class no_29_practice_set {
 
 
             }
+
+
+//  ---->> function for QN NO.21 (optimize code) :
+
+    public static boolean sorted(int matrix3[][], int key2) {
+
+        int row = 0;
+        int col = matrix3[0].length-1;
+
+        while (row< matrix3.length && col>=0) {
+
+            if (matrix3[row][col]==key2) {
+                System.out.println(" found key at index : ( " + row + " " + col + " )");
+                return true;
+                
+            }
+            else if (key2<matrix3[row][col]){
+                col--;
+
+            }else{
+                row++;
+            }
+           
+        } 
+        System.out.println("key not found ");   
+        return false;   
+        
+        
+
+    }
+        
+    
 
     
 
@@ -366,7 +400,7 @@ public class no_29_practice_set {
 
             height =[ 4, 2, 0 , 6 , 3 ,2 ,5]
  */
-            int height[] = { 4 , 2 , 0, 6 , 3 , 2 , 5 };
+ /*           int height[] = { 4 , 2 , 0, 6 , 3 , 2 , 5 };
             int n = height.length;
              
             // calculating left max boundary array 
@@ -376,7 +410,7 @@ public class no_29_practice_set {
 
             for (int i = 1; i < height.length; i++) {
                 leftmax[i] = Math.max(height[i], leftmax[i -1]); 
-                // System.out.print(leftmax[i] + " ");   //just checking array is correct or not..
+                //  System.out.print(leftmax[i] + " ");   //just checking array is correct or not..
 
             }
             // calculating right max boundary array
@@ -386,7 +420,7 @@ public class no_29_practice_set {
 
             for (int i = n-2; i >= 0; i--) {
                 rightmax[i] = Math.max(height[i], rightmax[i+1]);
-                // System.out.print(rightmax[i] + " " );  //just checking array is correct or not..
+                //  System.out.print(rightmax[i] + " " );  //just checking array is correct or not..
             
             }
 
@@ -403,7 +437,7 @@ public class no_29_practice_set {
 
                System.out.println( "TRAPPED RAINWATER IN BAR : " + trapped_water);
 
-
+*/ 
 
 /*  QN NO.17 -----> BUY AND SELL STOKES :
                
@@ -502,24 +536,126 @@ public class no_29_practice_set {
              }
            
             System.out.println();
+
+
+
+
+
+
+/*  QN NO.20 ----->  DIAGONAL SUM : 
              
+      1 | 2 | 3 | 4             PRIMARY DIAGONAL SUM : 34     (LEFT CORNER TO RIGHT CORNER)
+      5 | 6 | 7 | 8             SECONDARY DIAGONAL SUM : 34   (RIGHT CORNER TO LEFT CORNER)
+      9 | 10| 11| 12            
+      13| 14| 15| 16            EXPECTED OUTPUT : PRIMARY DIAGONAL + SECONDARY DIAGONAL = 64
+
+*/
+
+    
+     int matrix1[][] = { { 1 , 2 , 3 , 4 } , { 5 , 6 , 7 , 8  },
+                        { 9 , 10 , 11 , 12 } , { 13 , 14 , 15 , 16 } };
+
+    int dia_sum=0;
+
+    for (int i = 0; i < matrix1.length; i++) {
+         
+        for (int j = 0; j < matrix1[0].length; j++) {
+            // System.out.print(" " +matrix1[i][j]);  // for checking loop
+
+            if (i==j) {             // for Priamry diagonal  // and for overlaping elememt
+                dia_sum+= matrix1[i][j];
+            }  
+
+            else if (i+j== matrix1.length-1) {
+                dia_sum+= matrix1[i][j];
+
+                
+            }
+
+        }  
+    }
+            System.out.println("\nDiagonal sum is : " + dia_sum);
+            
+        
+// ---->> HERE... ABOVE CODE IS NOT MUCH OPTIMIZE BCOZ IT'S TIME COMLEXITY IS HIGH DUE TO TWICE LOOP WHICH GOING THROUG EACH LOCATION OF ELEMET IN MATRIX 
+//              OPTIMIZE CODE ===>>
+
+
+    int dia_sum2=0;
+    for (int i = 0; i < matrix1.length; i++) {
+        // for primary diagonal 
+
+        dia_sum2 += matrix1[i][i];
+
+        // for secondary diagonal 
+
+        if (i!= matrix1.length-1-i ) {
+            
+        
+            dia_sum2 += matrix1[i][matrix1.length-i-1];
+        }
+
+        
+    }
+    System.out.print("\ndiagonal sum with optimized code is : "+ dia_sum2 +"\n");
+
+
+
+/*  QN NO.21---->> SEARCH IN SORTED MATRIX 
+
+    10 |20 |30 |40          SEARCH FOR A KEY IN ROW WISE & COL WISE SORTED MATEIX 
+    15 |25 |35 |45           key =33
+    27 |29 |37 |48  
+    32 |33 |39 |50
+
+
+ */
+
+ /*    int matrix3[][] = { { 10 , 20 , 30, 40 } , { 15 , 25 , 35 , 45  },
+                        { 27 , 29 , 37 , 48 } , { 32 , 33 , 39 , 50 } };
+
+    int n = matrix3.length;
+    int m = matrix3[0].length;
+    int key2 = 33;
+
+    
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            // System.out.print( " " + matrix3[i][j]); // checking lopp for correct matrix
+            if (matrix3[i][j]==key2) {
+                System.out.print("key index is : " + "( " +i + " " + j +" )");
+                break;             
+            }
+        }
+    }            
+            
+*/
+
+//  ABOVE PROGRAM IS BRUTEFORECE TYPE MEANS NOT OPTIMIZE CODE (BCOZ THE LOOP IS GOING FROM ALL INDEX OF ELEMENT)
+//    ----->>  OPTIMIZE WAY :
+
+        int matrix3[][] = { { 10 , 20 , 30, 40 } , { 15 , 25 , 35 , 45  },
+                        { 27 , 29 , 37 , 48 } , { 32 , 33 , 39 , 50 } };
+
+        
+        int key2 = 33;
+
+        sorted(matrix3, key2);
+        
+
+        
+
 
 
             
-
-
-
-
-
-
-
-
-
-
+        
 
     }
 
-}                                                               
+}
+
+
+
 
 
 
