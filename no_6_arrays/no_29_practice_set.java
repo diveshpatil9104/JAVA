@@ -400,7 +400,7 @@ public class no_29_practice_set {
 
             height =[ 4, 2, 0 , 6 , 3 ,2 ,5]
  */
- /*           int height[] = { 4 , 2 , 0, 6 , 3 , 2 , 5 };
+            int height[] = { 4 , 2 , 0, 6 , 3 , 2 , 5 };
             int n = height.length;
              
             // calculating left max boundary array 
@@ -437,7 +437,7 @@ public class no_29_practice_set {
 
                System.out.println( "TRAPPED RAINWATER IN BAR : " + trapped_water);
 
-*/ 
+
 
 /*  QN NO.17 -----> BUY AND SELL STOKES :
                
@@ -642,12 +642,7 @@ public class no_29_practice_set {
 
         sorted(matrix3, key2);
         
-
         
-
-
-
-            
         
 
     }
