@@ -15,7 +15,7 @@ public class no_31_methods {
         else{
          z = (x+y)*5;
          }
-        //  x = 1000;   ...this line of code not creats change in value of a and b bcoz they are copy ..😇 
+        //  x = 1000;   ...this line of code not creates change in values of a and b bcoz they are copy ..😇 
          return z;    //lout chalo z ke value ke sath jaha se tum aaye the ... 😌  
 
     }
