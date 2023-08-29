@@ -92,7 +92,7 @@ public class no_26_arrays {
                         [ARRAY IS TYPE OF PASS BY REFERENCE ]
         
 */ 
-
+ 
         int marks[] = { 98 , 99 , 100 };
         int nonchangeble = 5;
         update(marks , nonchangeble);
