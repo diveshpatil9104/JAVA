@@ -20,13 +20,13 @@ public class no_18_elseif {
         // }
 
         // else if (age>80){
-        // System.out.println("U ARE BUDDHA AND GOING TO DEAD ");
+        // System.out.println("U ARE VERY OLDER AND GOING TO DEAD ");
         // }
         // else if (age>60){
-        // System.out.println("U ARE BUDDHA");
+        // System.out.println("U ARE OLDER");
         // }
         // else if (age>40){
-        // System.out.println("U ARE MAN ");
+        // System.out.println("U ARE IN MIDDLE AGE ");
         // }
         // else if (age>20){
         // System.out.println("U ARE YOUNG");
