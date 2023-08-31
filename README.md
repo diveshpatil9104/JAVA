@@ -31,7 +31,7 @@ Welcome to the Java Code and Notes repository! Here, you'll find a collection of
 
 ## Contributing
 
-We welcome contributions to this repository. If you have additional Java code samples or notes to share, feel free to submit pull requests. Please follow the guidelines outlined in our [contributing.md](link-to-contributing-guidelines) file.
+We welcome contributions to this repository. If you have additional Java code samples or notes to share, feel free to submit pull requests. Please follow the guidelines outlined in our [contributing.md](https://github.com/diveshpatil9104/JAVA/blob/master/contributing.md) file.
 
 ## Issues and Feedback
 
