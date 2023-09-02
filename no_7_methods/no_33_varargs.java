@@ -2,7 +2,7 @@ package no_7_methods;
 
 public class no_33_varargs {
  /*    static int sum(int a , int b , int c){
-        return a+b+c; }                                 // to avoiding this type of overloading we use varags method..
+        return a+b+c; }                                 // to avoiding this type of overloading we use varargs method..
 
      static int sum(int a , int b){
             return a+b; }
