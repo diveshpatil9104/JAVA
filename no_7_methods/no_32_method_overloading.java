@@ -20,11 +20,11 @@ public class no_32_method_overloading {
     }
 
     static void foo(int a){
-        System.out.println("Good Morning " + a + "  Bhava");
+        System.out.println("Good Morning " + a + " Bhava");
     }
 
     static void foo(int a , int b ){
-        System.out.println("Good Morning " + a + " And " + b + "  Bhava");
+        System.out.println("Good Morning " + a + " And " + b + " Bhava");
     }
     public static void main(String[] args) {
 
