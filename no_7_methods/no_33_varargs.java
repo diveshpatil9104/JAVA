@@ -11,6 +11,7 @@ public class no_33_varargs {
 */  
 
 // --------->> METHOD OF VARIABLE ARGUMENTS <<--------------
+    
     static int sum(int ...array){  
         // AVALABLE AS int []arr  
         int result=0 ;
@@ -22,7 +23,7 @@ public class no_33_varargs {
 
     public static void main(String[] args) {
         System.out.println("\nWELCOME TO CODE OF VARARGS..😇 ");
-        System.out.println("the sum of 4 and 5 is : " + sum(4, 5));
+        System.out.println("\nthe sum of 4 and 5 is : " + sum(4, 5));
         System.out.println("the sum of 4 ,3 and 5 is : " + sum(4,3, 5));
         System.out.println("the sum of 4 ,3,5 and 5 is : " + sum(4, 3 ,5,5 ));
         // but this methods is very time consuming hence , we use VARIABLE ARGUMENTS 
