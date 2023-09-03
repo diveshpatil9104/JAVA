@@ -13,7 +13,7 @@ public class no_33_varargs {
 // --------->> METHOD OF VARIABLE ARGUMENTS <<--------------
     
     static int sum(int ...array){  
-        // AVALABLE AS int []arr  
+        // AVAILABLE AS int []arr  
         int result=0 ;
         for(int a : array){
             result= result+a;
