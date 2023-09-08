@@ -25,7 +25,7 @@ QN NO.1 ---->> CREATE A CLASS EMPLOYEE WITH FOLLOWING PROPERTIES AND METHODS
 
         Cellphone call = new Cellphone();
         call.callingfriend();
-        call.forringinf();
+        call.forringing();
         call.forvibrate();
 
 
@@ -94,7 +94,7 @@ class Cellphone{
 
 
 
-    public void forringinf(){
+    public void forringing(){
         System.out.println("Ringing...");
     }
 
@@ -172,12 +172,4 @@ class Tommy{
     
     }
 
-
-
-
-
 }
-
-
-
-
