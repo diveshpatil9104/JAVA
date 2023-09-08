@@ -14,6 +14,7 @@ public class no_39_access_modi {
         // myacc.password = "1234";     // here we cant change password dur to private modifire and this line throws an error
         myacc.setpass("12345");     // here we set password by using function and methods  but it is not accessable  
         
+        System.out.println(myacc.getpass()); // here it can accesable  due to function / methods of class BankAccount but not directly in main function
    
   
     }
@@ -48,7 +49,12 @@ class BankAccount{
 
 
     public void setpass(String pwd){
-        pwd=password;
-        
+        password=pwd;
+    
     }
+
+    public String getpass(){
+        return password;
+    }
+
 }
