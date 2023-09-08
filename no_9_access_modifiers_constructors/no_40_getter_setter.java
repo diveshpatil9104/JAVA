@@ -11,7 +11,7 @@ public class no_40_getter_setter {
         System.out.println(sagar.id);
         sagar.name = "sagar amrut patil";
 
-*/   
+*/  
 
         sagar.setname("sagar amrut patil");
         System.out.println(sagar.getname());
