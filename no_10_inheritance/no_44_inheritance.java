@@ -44,7 +44,7 @@ class Base {
 }
 
 
-class Derived extends Base{         // INHERITACE IN JAVA IS DECLARED USING extends KEYWORD (HERE Derived CLASS GET ALL PROPERTIES OF Base CLASS )
+class Derived extends Base{         // INHERITACE IN JAVA IS DECLARED USING the extends KEYWORD (HERE Derived CLASS GET ALL PROPERTIES OF Base CLASS )
 
     int y;
     public int getY(){
