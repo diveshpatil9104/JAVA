@@ -1,7 +1,7 @@
 package no_6_arrays;
 import java.util.Scanner;
 
-import no_5_loop_control_instruction.revision;
+
 
 
 
