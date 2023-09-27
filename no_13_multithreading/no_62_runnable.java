@@ -11,7 +11,7 @@ public class no_62_runnable {
 
 //       thread.start();    this line of code occurs error ...
 //       thread2.start();    for running threading BY IMPLEMENTING RUNTOME INTERFACE we want create object of Thread class also 
-//                           And pass the object of Mythrea1 & MyThread2 and call the start(); from object of Thread ..
+//                           And pass the object of Mythrea1 & MyThread2 and call the start(); from object of Thread..
         working_thread.start();
         working_thread2.start();
 
