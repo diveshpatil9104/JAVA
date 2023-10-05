@@ -1,6 +1,6 @@
 package no_15_advanced_java_1;
 
-//import java.util.ArrayList;             // JAVA FRAMEWORK-COLLECTIONS ARE PRESENT IN java.util PACKAGE 
+//import java.util.ArrayList;         // JAVA FRAMEWORK-COLLECTIONS ARE PRESENT IN java.util PACKAGE 
 
 public class no_76_collections {
     public static void main(String[] args) {
