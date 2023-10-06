@@ -4,7 +4,7 @@ import java.util.*;
 
 public class no_79_arraydeque {
     public static void main(String[] args) {
-        ArrayDeque<Integer> a1 = new ArrayDeque<>();   // ArrayDeque is Array who implements Deque interface the initial array size of constructor is 16 elements we can also give specified initial capacity.. 
+        ArrayDeque<Integer> a1 = new ArrayDeque<>();   // ArrayDeque is Array who implements Deque interface the initial array size of constructor is 16 elements we can also give specified initial capacity.... 
 
         a1.add(4);
         a1.add(6);
