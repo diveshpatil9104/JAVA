@@ -246,7 +246,7 @@ public class no_098_practice_set {
                     System.out.println(e);
                 }
             
-// QN NO.7 ----> CREATE A FILE WHICH STORES FACTORIAL OF NUMBER
+// QN NO.7 ----> CREATE A FILE WHICH STORES FACTORIAL OF NUMBER...
 
     int fact = 1;
     
