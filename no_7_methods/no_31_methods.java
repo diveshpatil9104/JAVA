@@ -39,5 +39,7 @@ public class no_31_methods {
         int c1 = logic(a1, b1);
 
          System.out.println(c1);
+         
+         
     }
 }
